@@ -1,0 +1,14 @@
+version: "3"
+services: 
+    app:
+      build: .
+      volumes:
+        - .:/meetup
+      ports:
+        - 8000:8000
+      image: app:meetup
+      container_name: django_container
+      command: python manage.py runserver 0.0.0.0:8000
+
+
+
